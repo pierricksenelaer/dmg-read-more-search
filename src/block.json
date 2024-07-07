@@ -1,0 +1,40 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/gutenberg-block-master",
+	"version": "0.1.0",
+	"title": "Boilerplate to build WP Gutenberg Blocks",
+	"category": "widgets",
+	"icon": "universal-access-alt",
+	"description": "Boilerplate",
+	"attributes": {
+	  "title": {
+		  "type": "string",
+		  "source": "html",
+		  "selector": "h3"
+	 },
+	 "mediaID": {
+	   "type": "number"
+	 },
+	 "mediaURL": {
+	   "type": "string"
+	 },
+	 "blurb": {
+	   "type": "string",
+	   "source": "html",
+	   "selector": ".copy-image-blurb"
+	 },
+     "theme_color": { 
+       "type": "string" 
+     }	
+	},
+	"example": {
+		"attributes": {
+			
+		}
+	},
+	"textdomain": "gutenberg-block-master",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
