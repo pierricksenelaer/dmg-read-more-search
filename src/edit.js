@@ -10,30 +10,15 @@ import apiFetch from '@wordpress/api-fetch';
 
 const Edit = ( props ) => {
     const {
-        attributes: { title, mediaID, mediaURL, blurb, theme_color },
+        attributes: { theme_color, postId, postTitle, postLink },
         setAttributes,
     } = props;
 
     const blockProps = useBlockProps();
 
-    const onChangeTitle = ( value ) => {
-        setAttributes( { title: value } );
-    };
-
-    const onSelectImage = ( media ) => {
-        setAttributes( {
-            mediaURL: media.url,
-            mediaID: media.id,
-        } );
-    };
-
-    const onChangeBlurb = ( value ) => {
-        setAttributes( { blurb: value } );
-    };
-
-    const onChangeCta = ( value ) => {
-        setAttributes( { cta: value } );
-    };
+    const [searchTerm, setSearchTerm] = useState('');
+    const [searchResults, setSearchResults] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     const onChangeThemeColor = ( themeColor ) => {
       setAttributes( { theme_color: themeColor } );
