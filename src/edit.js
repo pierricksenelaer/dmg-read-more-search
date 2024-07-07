@@ -20,6 +20,25 @@ const Edit = ( props ) => {
     const [searchResults, setSearchResults] = useState([]);
     const [loading, setLoading] = useState(false);
 
+    useEffect(() => {
+      setLoading(true);
+      if (searchTerm) {
+        // Check if the search term is a number to search by post ID
+        const path = isNaN(searchTerm)
+          ? `/wp/v2/posts?search=${searchTerm}&per_page=5`
+          : `/wp/v2/posts?include[]=${searchTerm}`;
+          apiFetch({ path }).then(posts => {
+            setSearchResults(posts);
+            setLoading(false);
+          });
+      } else {
+          apiFetch({ path: '/wp/v2/posts?per_page=5' }).then(posts => {
+              setSearchResults(posts);
+              setLoading(false);
+          });
+      }
+    }, [searchTerm]);
+    
     const onChangeThemeColor = ( themeColor ) => {
       setAttributes( { theme_color: themeColor } );
     };
