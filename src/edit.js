@@ -94,64 +94,19 @@ const Edit = ( props ) => {
             </Panel>
           </InspectorControls>
 
-          <PanelBody title={ __( 'CONTENT' ) }>
-            <div>
-              <div>
-                <MediaUpload
-                  onSelect={onSelectImage}
-                  type="image"
-                  value={ mediaID }
-                  render={ ( { open } ) => (
-                    <Button
-                      className={
-                        mediaID ? 'image-button' : 'button button-large'
-                      }
-                      onClick={ open }
-                    >
-
-                      { ! mediaID ? (
-                        __( 'Upload Image', 'gutenberg-block-master' )
-                      ) : (
-                        <img
-                          src={ mediaURL }
-                          alt={ __(
-                            'Upload Image',
-                            'gutenberg-block-master'
-                          ) }
-                        />
-                      ) }
-                    </Button>
-                  ) }
-                />
-              </div>
-
-              <div>
-
-                <RichText
-                  tagName="h3"
-                  className="block-heading"
-                  placeholder={ __(
-                    'Add Jumpoff Headline',
-                    'gutenberg-block-master'
-                  ) }
-                  value={ title }
-                  onChange={ onChangeTitle }
-                />
-
-                <RichText
-                  tagName="p"
-                  className="block-blurb"
-                  placeholder={ __(
-                    'Add Blurb',
-                    'gutenberg-block-master'
-                  ) }
-                  value={ blurb }
-                  onChange={ onChangeBlurb }
-                />
-
-              </div>
-            </div>
-          </PanelBody>
+          <PanelBody title={ __( 'LINK' ) }>
+          <div>
+            {postId ? (
+              <p className="dmg-read-more">
+                <a href={postLink}>
+                  {__('Read More: ', 'dmg')}{postTitle}
+                </a>
+              </p>
+            ) : (
+              <p>{__('No post selected', 'dmg')}</p>
+            )}
+          </div>
+        </PanelBody>
 
         </div>
     );
