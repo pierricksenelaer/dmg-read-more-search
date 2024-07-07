@@ -56,11 +56,11 @@ const Edit = ( props ) => {
           
           <InspectorControls>
             <Panel>
-              <PanelBody title="Header color">
+              <PanelBody title="Link color">
                 <fieldset>
                   <legend
                     className="">
-                    { __( 'Pls select', 'gutenberg-block-master' ) }
+                    { __( 'Pls select', 'dmg-read-more-search' ) }
                   </legend>
                   <ColorPalette 
                     value={ theme_color }
