@@ -5,6 +5,9 @@ import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls, ColorPalette } from '@wordpress/block-editor';
 import { Button, Panel, PanelBody, TextControl, Spinner } from '@wordpress/components';
 
+import { useState, useEffect } from '@wordpress/element';
+import apiFetch from '@wordpress/api-fetch';
+
 const Edit = ( props ) => {
     const {
         attributes: { title, mediaID, mediaURL, blurb, theme_color },
