@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name:       Gutenberg Block - Master
- * Description:       Boilerplate to build WP Gutenberg Blocks
+ * Plugin Name:       DMG Read More Search
+ * Description:       Choose a published post to insert into the editor as a stylized anchor link
  * Requires at least: 5.9
  * Requires PHP:      7.0
  * Version:           0.1.0
- * Author:            The Frameworks
+ * Author:            Pierrick Senelaer
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       gutenberg-block-master
+ * Text Domain:       dmg-read-more-search
  *
  * @package           create-block
  */
@@ -20,7 +20,7 @@
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-function create_block_gutenberg_block_master_block_init() {
+function create_block_dmg_read_more_search_block_init() {
 	register_block_type( __DIR__ . '/build' );
 }
-add_action( 'init', 'create_block_gutenberg_block_master_block_init' );
+add_action( 'init', 'create_block_dmg_read_more_search_block_init' );
