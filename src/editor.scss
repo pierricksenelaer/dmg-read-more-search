@@ -12,7 +12,8 @@
     padding: 0;
   }
 }
-.search-pagination + ul button {
+.search-results li > .components-button:focus:not(:disabled),
+.search-pagination .components-button:focus:not(:disabled) {
   outline: 0;
   box-shadow: none;
 }
