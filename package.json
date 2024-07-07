@@ -1,7 +1,7 @@
 {
-	"name": "gutenberg-block-master",
+	"name": "dmg-read-more-search",
 	"version": "0.1.0",
-	"description": "Boilerplate to build WP Gutenberg Blocks",
+	"description": "Choose a published post to insert into the editor as a stylized anchor link",
 	"author": "Pierrick Senelaer",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
