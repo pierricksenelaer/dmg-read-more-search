@@ -56,6 +56,29 @@ const Edit = ( props ) => {
           
           <InspectorControls>
             <Panel>
+              <PanelBody title={__('Post Selection', 'dmg')}>
+                <TextControl
+                  label={__('Search Posts', 'dmg-read-more-search')}
+                  placeholder={__('Post ID or keyword', 'dmg-read-more-search')}
+                  value={searchTerm}
+                  onChange={(value) => setSearchTerm(value)}
+                />
+                {loading && <Spinner />}
+                {searchResults.length > 0 && (
+                  <ul>
+                    {searchResults.map(post => (
+                      <li key={post.id}>
+                        <Button
+                          onClick={() => selectPost(post)}
+                        >
+                         {post.title.rendered}
+                        </Button>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </PanelBody>
+
               <PanelBody title="Link color">
                 <fieldset>
                   <legend
