@@ -2,8 +2,8 @@
  * WordPress dependencies
  */
 import { __ } from '@wordpress/i18n';
-import { RichText, MediaUpload, useBlockProps, InspectorControls, ColorPalette } from '@wordpress/block-editor';
-import { Button, Panel, PanelBody } from '@wordpress/components';
+import { useBlockProps, InspectorControls, ColorPalette } from '@wordpress/block-editor';
+import { Button, Panel, PanelBody, TextControl, Spinner } from '@wordpress/components';
 
 const Edit = ( props ) => {
     const {
