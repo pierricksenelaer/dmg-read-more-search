@@ -38,7 +38,15 @@ const Edit = ( props ) => {
           });
       }
     }, [searchTerm]);
-    
+
+    const selectPost = (post) => {
+      setAttributes({
+          postId: post.id,
+          postTitle: post.title.rendered,
+          postLink: post.link,
+      });
+    };
+
     const onChangeThemeColor = ( themeColor ) => {
       setAttributes( { theme_color: themeColor } );
     };
