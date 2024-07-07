@@ -31,4 +31,4 @@ License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 ## LIVE DEMO
 
 You can view this plugin in action from the following demo site
-https://www.pierrick-senelaer.com/dev/wp-playground
+https://www.pierrick-senelaer.com/dev/wp-playground/dmg-media/
